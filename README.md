@@ -12,6 +12,10 @@ We use the [method of Sobol](https://en.wikipedia.org/wiki/Variance-based_sensit
 
 Previous methods only conducted a one-at-a-time (OAT) analysis on the uncertain CPT entries. While useful, that type of analysis is oblivious to influences that may arise due to *interactions*, i.e. what happens when more than one uncertain parameter deviates far away from its original value. In contrast, Sobol offers a global analysis, which accounts for these interactions in the form of the *Sobol total indices*. Specifically, the method returns two indices $S_i$ and $S_i^T$ for each parameter $\theta_i$, called the *variance component* and the *total index* respectively. If $S^T_i \gg S_i$ for some parameter $\theta_i$, it means that the influence of $\theta_i$ on the QoI is mainly due to interactions with other uncertain parameters.
 
+## Requirements
+
+This code relies on `scipy`, `numpy`, `matplotlib`, `quimb`, `torch`, and [tnprob](https://github.com/rballester/tnprob).
+
 ## Citation
 
 If you use the method, please cite:
